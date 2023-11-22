@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/meta') %>
+<body class="d-flex flex-column min-vh-100">
+<!--<%- include('partials/header') %>-->
+    <h1 style=" padding:25px; text-align: center;">Welcome to Clay's Fun Times and Good Rhymes</h1>
+    <img src="images/image1.jpg" alt="">
+    <div id="loginRegisterContainer">
+        <form id="loginForm" method="post" action="/poopy">
+            <h2>Login</h2>
+            <label for="loginUsername">Username:</label>
+            <input type="text" id="loginUsername" name="loginUsername" required>
+    
+            <label for="loginPassword">Password:</label>
+            <input type="password" id="loginPassword" name="loginPassword" required>
+
+            <label style="visibility: hidden;" for="registerPassword">Password:</label>
+            <input style="visibility: hidden;"type="password" id="registerPassword" name="registerPassword">
+    
+            <button class="formButton  mx-auto btn btn-primary" type= "submit">Login</button>
+        </form>
+    
+        <form id="registerForm" method="post" action="/NewUser">
+            <h2>Register</h2>
+            <label for="registerUsername">Username:</label>
+            <input type="text" id="registerUsername" name="registerUsername" required>
+    
+            <label for="registerPassword">Password:</label>
+            <input type="password" id="registerPassword" name="registerPassword" required>
+    
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
+    
+            <button class="btn btn-success formButton mx-auto" type="submit">Register</button>
+        </form>
+    </div>
+ <%- include('partials/footer') %>
+ 
+</body>
+</html>
