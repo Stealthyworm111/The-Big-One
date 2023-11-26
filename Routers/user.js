@@ -7,20 +7,20 @@ const User = require("../models/user")
 
 router.post('/NewUser',async (req,res)=>{
     const u = new User(req.body)
+    console.log(req.body)
     if(req.body.registerPassword == req.body.confirmPassword){
-        let username = req.body.username
+        let username = req.body.registerUsername
         let password = req.body.registerPassword//gets password
     //step 1
-    const user = await User.findOne({username: username})//finds the user from username
-    if (!user) {
+    const foundUser = await User.findOne({username: username})//finds the user from username
+    if ((foundUser==null)) {
     try {
+        password = req.body.confirmPassword//saves the hash version
         password = await bcrypt.hash(password,8)//hashes password
-        req.body.password = password//saves the hash version
-        const user = new User(req.body.username,req.body.registerPassword)//creates user
+        const user = new User({username:req.body.registerUsername,password:password})//creates user
+        console.log(user.password)
         const u = await user.save()
-        const object = u.toObject()
-        delete object.password//deletes the password field
-        res.send(object)//sends it back
+        res.redirect('/Homepage')
     } catch (e) {
         console.log(e)
     }
@@ -28,7 +28,7 @@ router.post('/NewUser',async (req,res)=>{
     console.log(req.body)
 }
 else{
-    res.send("Dear God")
+    res.send("Username already exists... Go back and try again")
 }
 }
 else{
