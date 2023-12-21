@@ -25,6 +25,6 @@ mongoose.connect(url,{
 
 app.get('/',(req,res)=>{
     console.log("request received!!!")
-    res.render('index.ejs',{title:"Home"})
+    res.render('index.ejs',{title:"Login/Register Page"})
     
 })

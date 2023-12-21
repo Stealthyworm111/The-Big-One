@@ -1,0 +1,30 @@
+<div id="sidebar">
+    <div  id="toggle-btn" class="expanded" onclick="toggleSidebar()">𓆤</div>
+    <a href="#">Running Tracker</a>
+    <a href="#">MPG Calculator</a>
+    <a href="#">To-Do List</a>
+</div>
+
+<div id="main">
+    <!-- Content goes here -->
+    <h1 style="text-align: center;">Gored Gourd Dashoard</h1>
+    <p></p>
+</div>
+
+<script>
+    function toggleSidebar() {
+        var sidebar = document.getElementById('sidebar');
+        var main = document.getElementById('main');
+        var toggleBtn = document.getElementById('toggle-btn');
+
+        if (sidebar.style.width === '250px') {
+            sidebar.style.width = '0';
+            main.style.marginLeft = '0';
+        } else {
+            sidebar.style.width = '250px';
+            main.style.marginLeft = '250px';
+        }
+
+        toggleBtn.classList.toggle('expanded');
+    }
+</script>

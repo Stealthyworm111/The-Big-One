@@ -1,7 +1,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
+    background-color: rgb(233, 232, 227);
 }
 
 #loginRegisterContainer {
@@ -31,3 +31,78 @@ form {
 h2 {
     text-align: center;
 }
+
+#sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+    color: black;
+    text-align: center;
+    transition: 0.5s;
+}
+
+#sidebar a {
+    padding: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+#sidebar a:hover {
+    color: #f1f1f1;
+}
+
+#main {
+    transition: margin-left 0.5s;
+    padding: 32px;
+}
+
+#toggle-btn {
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+    position: fixed;
+    margin-left: 10px;
+    margin-top: 10px;
+    transition: 0.5s;
+}
+
+#toggle-btn.expanded {
+    transform: rotate(360deg);
+    color: black;
+}
+#button1{
+    background-color: aquamarine;
+    padding-left: 100px;
+    padding-right: 100px;
+    color: black;
+    border-width: 0;
+    
+}
+#button1:hover{
+    background-color: white;
+    transition: 0.5s;
+}
+
+@keyframes rainbowAnimation {
+    0% { color: red; }
+    16.666% { color: orange; }
+    33.333% { color: yellow; }
+    50% { color: green; }
+    66.666% { color: blue; }
+    83.333% { color: indigo; }
+    100% { color: violet; }
+  }
+
+  #rainbowtag{
+    animation: rainbowAnimation 30s infinite;
+    font-weight: bold;
+    text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
+  }
