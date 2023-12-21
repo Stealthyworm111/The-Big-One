@@ -1,3 +1,4 @@
+
 const express = require('express');
 require('dotenv').config()
 const path = require('path');
@@ -6,7 +7,7 @@ const userRouter = require("./Routers/user")
 const app = express()
 //const port = 3000
 app.listen(port)
-
+const url = process.env.MONGO_URL
 
 app.set('Views',path.join(__dirname,'Views'))
 app.set('view engine','ejs')
@@ -16,7 +17,7 @@ app.use(express.json())
 app.use(userRouter)
 
 
-const url = process.env.MONGO_URL
+
 
 mongoose.connect(url,{
     useNewUrlParser: true,
