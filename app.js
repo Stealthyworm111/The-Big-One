@@ -1,9 +1,10 @@
 const express = require('express');
+require('dotenv').config()
 const path = require('path');
 const mongoose = require('mongoose')
 const userRouter = require("./Routers/user")
 const app = express()
-const port = 3000
+//const port = 3000
 app.listen(port)
 
 
@@ -15,7 +16,7 @@ app.use(express.json())
 app.use(userRouter)
 
 
-const url = "mongodb+srv://ceparker:Ew1edK8VPaJoyKBD@cluster0.mc8v6.mongodb.net/?retryWrites=true&w=majority"
+const url = process.env.MONGO_URL
 
 mongoose.connect(url,{
     useNewUrlParser: true,
