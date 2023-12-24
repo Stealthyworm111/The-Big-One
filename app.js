@@ -5,7 +5,7 @@ const path = require('path');
 const mongoose = require('mongoose')
 const userRouter = require("./Routers/user")
 const app = express()
-//const port = 3000
+const port = 3000
 app.listen(port)
 const url = process.env.MONGO_URL
 
