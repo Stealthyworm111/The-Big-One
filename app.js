@@ -13,10 +13,8 @@ app.set('view engine','ejs')
 app.use(express.urlencoded({extended: true}))
 app.use(express.static('Public'))
 app.use(express.json())
-app.use(require("./routers/user"))
+app.use(require('./routers/user'))
 const User = require('./models/user')
-
-
 
 
 mongoose.connect(url,{
