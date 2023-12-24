@@ -109,11 +109,12 @@
         font-weight: bold;
         text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
       }</style>
-<body class="d-flex flex-column min-vh-100" onload="getLocation()">
+<body class="d-flex flex-column min-vh-100">
 <!--<%- include('partials/header') %>-->
     <h1 style=" padding:25px; text-align: center;">Welcome to Clay's Fun Times and Good Rhymes</h1>
     <img src="images/image1.jpg" alt="">
     <div id="loginRegisterContainer">
+        <center>
         <form id="loginForm" method="post" action="/Login">
             <h2>Login</h2>
             <label for="loginUsername">Username:</label>
@@ -127,7 +128,8 @@
     
             <button class="formButton  mx-auto btn btn-primary" type= "submit">Login</button>
         </form>
-    
+        </div>
+        <div id="loginRegisterContainer">
         <form id="registerForm" method="post" action="/NewUser">
             <h2>Register</h2>
             <label for="registerUsername">Username:</label>
@@ -139,8 +141,9 @@
             <label for="confirmPassword">Confirm Password:</label>
             <input type="password" id="confirmPassword" name="confirmPassword" required>
     
-            <button class="btn btn-success formButton mx-auto" type="submit">Register</button>
+            <center><button class="btn btn-success formButton mx-auto" type="submit">Register</button></center> 
         </form>
+    </center>
     </div>
  <%- include('partials/footer') %>
  
