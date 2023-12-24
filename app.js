@@ -2,9 +2,9 @@ require('dotenv').config()
 const express = require('express');
 const path = require('path');
 const mongoose = require('mongoose')
-const userRouter = require("./routers/user")
+
 const app = express()
-const port = 3000
+const port = process.env.PORT
 app.listen(port)
 const url = process.env.MONGO_URL
 
@@ -13,7 +13,7 @@ app.set('view engine','ejs')
 app.use(express.urlencoded({extended: true}))
 app.use(express.static('Public'))
 app.use(express.json())
-app.use(userRouter)
+app.use(require("./routers/user"))
 const User = require('./models/user')
 
 
