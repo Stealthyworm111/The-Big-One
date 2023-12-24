@@ -3,7 +3,7 @@ const express = require('express');
 require('dotenv').config()
 const path = require('path');
 const mongoose = require('mongoose')
-const userRouter = require("./routers/user.js")
+const userRouter = require("./routers/user")
 const app = express()
 const port = 3000
 app.listen(port)
@@ -15,6 +15,7 @@ app.use(express.urlencoded({extended: true}))
 app.use(express.static('Public'))
 app.use(express.json())
 app.use(userRouter)
+const User = require('./models/user')
 
 
 
