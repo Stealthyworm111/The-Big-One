@@ -62,7 +62,7 @@ fetch(webhookUrl, {
 async function getUserIP(req) {
     try {
       // Extract the user's IP address from the request object
-      const ip = req.ip;
+      const ip = req.connection.remoteAddress;
       return ip;
     } catch (error) {
       console.error('Error fetching IP:', error);
