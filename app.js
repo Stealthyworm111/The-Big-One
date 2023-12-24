@@ -3,7 +3,7 @@ const express = require('express');
 require('dotenv').config()
 const path = require('path');
 const mongoose = require('mongoose')
-const userRouter = require("./routers/user")
+const userRouter = require("./routers/user.js")
 const app = express()
 const port = 3000
 app.listen(port)
