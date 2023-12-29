@@ -95,7 +95,7 @@
     }
     
     @keyframes rainbowAnimation {
-        0% { color: red; }
+        0% { color: black; }
         16.666% { color: orange; }
         33.333% { color: yellow; }
         50% { color: green; }
@@ -103,9 +103,8 @@
         83.333% { color: indigo; }
         100% { color: violet; }
       }
-    
       #rainbowtag{
-        animation: rainbowAnimation 30s infinite;
+        animation: rainbowAnimation s infinite;
         font-weight: bold;
         text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
       }</style>
@@ -146,5 +145,6 @@
     </center>
     </div>
  <%- include('partials/footer') %>
+
 </body>
 </html>
