@@ -9,43 +9,30 @@
 <style>
     body {
         font-family: Arial, sans-serif;
-        background-color: #4F6F52;
-        color: white;
+        background-color: rgb(233, 232, 227);
     }
     
     #loginRegisterContainer {
         display: flex;
         justify-content: center;
         align-items: center;
-        
-        
     }
-    
     form {
         max-width: 300px;
         margin: 20px;
-        background-color: #739072;
+        background-color: #fff;
         padding: 20px;
         border-radius: 8px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        height: 40vh;
-        
+        height: 40vh;   
     }
-    input{
-        border-radius: 8px;
-        border-color: white
-    }
-    
     .formButton {
         width: 100px;
         margin-top: 20%;
-        border-radius: 25px;
     }
-    
     h2 {
         text-align: center;
     }
-    
     #sidebar {
         height: 100%;
         width: 0;
@@ -59,7 +46,6 @@
         text-align: center;
         transition: 0.5s;
     }
-    
     #sidebar a {
         padding: 10px;
         text-decoration: none;
@@ -68,16 +54,13 @@
         display: block;
         transition: 0.3s;
     }
-    
     #sidebar a:hover {
         color: #f1f1f1;
     }
-    
     #main {
         transition: margin-left 0.5s;
         padding: 32px;
     }
-    
     #toggle-btn {
         font-size: 24px;
         cursor: pointer;
@@ -87,7 +70,6 @@
         margin-top: 10px;
         transition: 0.5s;
     }
-    
     #toggle-btn.expanded {
         transform: rotate(360deg);
         color: black;
@@ -98,14 +80,20 @@
         padding-right: 100px;
         color: black;
         border-width: 0;
-        
     }
     #button1:hover{
         background-color: white;
         transition: 0.5s;
     }
-    
-    </style>
+    @keyframes rainbowAnimation {
+        0% { color: black;Text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;}
+        50% { color: white;Text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;}
+      }
+      #rainbowtag{
+        animation: rainbowAnimation 5s infinite;
+        font-weight: bold;
+        text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
+      }</style>
 <body>
     <div id="sidebar">
         <div  id="toggle-btn" class="expanded" onclick="toggleSidebar()">𓆤</div>
@@ -119,7 +107,7 @@
         <h1 style="text-align: center;">Gored Gourd Dashoard</h1>
 
         <div style="text-align: center;">
-            <p style="padding: 50px;">
+            <p style="padding: 50px;" id="rainbowtag">
                 In the tapestry of existence, where silence weaves its intricate threads,
                 I, a paradoxical enigma, emerge from the words left unsaid.
                 No lips to move, yet I articulate the language of the heart,

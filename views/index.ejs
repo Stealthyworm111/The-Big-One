@@ -4,7 +4,8 @@
 <style>
     body {
         font-family: Arial, sans-serif;
-        background-color: rgb(233, 232, 227);
+        background-color: #4F6F52;
+        color: white;
     }
     
     #loginRegisterContainer {
@@ -18,17 +19,22 @@
     form {
         max-width: 300px;
         margin: 20px;
-        background-color: #fff;
+        background-color: #739072;
         padding: 20px;
         border-radius: 8px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         height: 40vh;
         
     }
+    input{
+        border-radius: 8px;
+        border-color: white
+    }
     
     .formButton {
         width: 100px;
         margin-top: 20%;
+        border-radius: 25px;
     }
     
     h2 {
@@ -108,41 +114,43 @@
         font-weight: bold;
         text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
       }</style>
-<body class="d-flex flex-column min-vh-100">
+<body style="display: flex; flex-direction: column; min-height: 100dvh;">
 <!--<%- include('partials/header') %>-->
     <h1 style=" padding:25px; text-align: center;">Welcome to Clay's Fun Times and Good Rhymes</h1>
     <img src="images/image1.jpg" alt="">
-    <div id="loginRegisterContainer">
-        <center>
-        <form id="loginForm" method="post" action="/Login">
-            <h2>Login</h2>
-            <label for="loginUsername">Username:</label>
-            <input type="text" id="loginUsername" name="loginUsername" required>
-    
-            <label for="loginPassword">Password:</label>
-            <input type="password" id="loginPassword" name="loginPassword" required>
-
-            <label style="visibility: hidden;" for="Password">Password:</label>
-            <input style="visibility: hidden;"type="password" id="Password" name="Password">
-    
-            <button class="formButton  mx-auto btn btn-primary" type= "submit">Login</button>
-        </form>
+    <div class="container text-center">
+        <div class="row">
+            <div class="col" align ="center">
+                <form id="loginForm" method="post" action="/Login">
+                    <h2>Login</h2>
+                    <label for="loginUsername">Username:</label>
+                    <input type="text" id="loginUsername" name="loginUsername" required>
+            
+                    <label for="loginPassword">Password:</label>
+                    <input type="password" id="loginPassword" name="loginPassword" required>
+        
+                    <label style="visibility: hidden;" for="Password">Password:</label>
+                    <input style="visibility: hidden;"type="password" id="Password" name="Password">
+            
+                    <button class="formButton  mx-auto" type= "submit">Login</button>
+                </form>
+              </div>
+              <div class="col" align ="center">
+                <form id="registerForm" method="post" action="/NewUser">
+                    <h2>Register</h2>
+                    <label for="registerUsername">Username:</label>
+                    <input type="text" id="registerUsername" name="registerUsername" required>
+            
+                    <label for="registerPassword">Password:</label>
+                    <input type="password" id="registerPassword" name="registerPassword" required>
+            
+                    <label for="confirmPassword">Confirm Password:</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+            
+                    <center><button class="formButton mx-auto" type="submit">Register</button></center> 
+                </form>
+            </div>
         </div>
-        <div id="loginRegisterContainer">
-        <form id="registerForm" method="post" action="/NewUser">
-            <h2>Register</h2>
-            <label for="registerUsername">Username:</label>
-            <input type="text" id="registerUsername" name="registerUsername" required>
-    
-            <label for="registerPassword">Password:</label>
-            <input type="password" id="registerPassword" name="registerPassword" required>
-    
-            <label for="confirmPassword">Confirm Password:</label>
-            <input type="password" id="confirmPassword" name="confirmPassword" required>
-    
-            <center><button class="btn btn-success formButton mx-auto" type="submit">Register</button></center> 
-        </form>
-    </center>
     </div>
  <%- include('partials/footer') %>
 
