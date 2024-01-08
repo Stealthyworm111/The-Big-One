@@ -19,6 +19,7 @@ app.use(express.urlencoded({extended: true}))
 app.use(express.static('Public'))
 app.use(express.json())
 app.use(require('./routers/user'))
+app.use(require('./routers/running'))
 const User = require('./models/user');
 const { localsName } = require('ejs');
 app.use(bodyParser.json());
